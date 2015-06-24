@@ -58,7 +58,7 @@ View the raw data:
 
     %s
 
-.. literalinclude:: ../../%s
+.. literalinclude:: androlyze/%s
 
 
 """

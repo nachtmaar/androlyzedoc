@@ -1685,6 +1685,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: ../../scripts_builtin/CodePermissions.py
+.. literalinclude:: androlyze/scripts_builtin/CodePermissions.py
 
 

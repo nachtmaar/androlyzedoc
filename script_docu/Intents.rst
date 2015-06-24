@@ -196,6 +196,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: ../../scripts_builtin/manifest/components/Intents.py
+.. literalinclude:: androlyze/scripts_builtin/manifest/components/Intents.py
 
 

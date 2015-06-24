@@ -2250,6 +2250,6 @@ View the raw data:
 	 <attvalue id="6" value=
 
 
-.. literalinclude:: ../../scripts_builtin/GVMAnalysisExample.py
+.. literalinclude:: androlyze/scripts_builtin/GVMAnalysisExample.py
 
 

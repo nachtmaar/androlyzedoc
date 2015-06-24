@@ -17,5 +17,5 @@ Optional:
 There is a utility class for disassembling, decompiling, accessing the abstract syntrax tree etc.
 Have a look at :py:mod:`.AnaUtil`
 
-.. literalinclude:: ../androlyze/model/script/ScriptTemplate.py
+.. literalinclude:: androlyze/androlyze/model/script/ScriptTemplate.py
 

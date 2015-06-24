@@ -860,6 +860,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: ../../scripts_builtin/manifest/components/PublicContentProviders_Manifest.py
+.. literalinclude:: androlyze/scripts_builtin/manifest/components/PublicContentProviders_Manifest.py
 
 

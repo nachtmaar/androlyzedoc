@@ -81,6 +81,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: ../../scripts_builtin/ShowLoggingFuncs.py
+.. literalinclude:: androlyze/scripts_builtin/ShowLoggingFuncs.py
 
 

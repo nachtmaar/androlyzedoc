@@ -2636,6 +2636,6 @@ View the raw data:
 	                     
 
 
-.. literalinclude:: ../../scripts_builtin/ASTifyMethodsText.py
+.. literalinclude:: androlyze/scripts_builtin/ASTifyMethodsText.py
 
 

@@ -64,4 +64,4 @@ There are 5 interesting methods you should see:
 	        ]
 	    }
 
-.. literalinclude:: ../androlyze/model/script/impl/ChainedApkInfos.py
+.. literalinclude:: androlyze/androlyze/model/script/impl/ChainedApkInfos.py
