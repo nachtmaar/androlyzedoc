@@ -21,32 +21,14 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('./'))
+sys.path.insert(0, os.path.abspath('androlyze/'))
+sys.path.append(os.path.abspath("androguard"))
 
 # twitter bootstrap
 #import sphinx_bootstrap_theme
 #from bootstrap_conf import *
 
-sys.path.insert(0, os.path.abspath('../'))
-sys.path.insert(0, os.path.abspath('../'))
-
-from androlyze.settings import *
 from androlyze.Constants import *
-
-ANDROGUARD_PATH=None
-# rtd build
-if on_rtd:
-   ANDROGUARD_PATH = "androguard"
-# local build
-else:
-   settings = Settings("../%s" % DEFAULTS_PATH)
-   ANDROGUARD_PATH = settings[(SECTION_ANDROGUARD, KEY_ANDROGUARD_PATH)]
-
-if not os.path.isabs(ANDROGUARD_PATH):
-  ANDROGUARD_PATH = '../%s' % ANDROGUARD_PATH  
-
-print "appending %s to sys.path" % ANDROGUARD_PATH
-sys.path.append(ANDROGUARD_PATH)
 
 try:
 	import androguard

@@ -1,0 +1,8 @@
+pymongo
+celery
+ipython
+networkx
+boto
+fabric
+simplejson
+numpydoc
