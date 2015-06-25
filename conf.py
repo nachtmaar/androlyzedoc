@@ -24,6 +24,11 @@ sys.path.insert(0, os.path.abspath('./'))
 sys.path.insert(1, os.path.abspath('androlyze/'))
 sys.path.append(os.path.abspath("androguard"))
 
+# TOOD: REMOVE
+print sys.path
+os.system("pwd")
+os.system("ls -1 .")
+
 # twitter bootstrap
 #import sphinx_bootstrap_theme
 #from bootstrap_conf import *
