@@ -849,6 +849,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/manifest/Manifest.py
+.. literalinclude:: ../androlyze/scripts_builtin/manifest/Manifest.py
 
 

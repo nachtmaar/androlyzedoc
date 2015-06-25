@@ -76,6 +76,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/manifest/components/BroadcastReceivers.py
+.. literalinclude:: ../androlyze/scripts_builtin/manifest/components/BroadcastReceivers.py
 
 

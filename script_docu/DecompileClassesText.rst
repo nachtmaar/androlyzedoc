@@ -4042,6 +4042,6 @@ View the raw data:
 	    
 
 
-.. literalinclude:: androlyze/scripts_builtin/DecompileClassesText.py
+.. literalinclude:: ../androlyze/scripts_builtin/DecompileClassesText.py
 
 

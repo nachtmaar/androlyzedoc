@@ -71,6 +71,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/manifest/components/ContentProviders.py
+.. literalinclude:: ../androlyze/scripts_builtin/manifest/components/ContentProviders.py
 
 

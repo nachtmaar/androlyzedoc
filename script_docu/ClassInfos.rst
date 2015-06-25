@@ -1930,6 +1930,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/ClassInfos.py
+.. literalinclude:: ../androlyze/scripts_builtin/ClassInfos.py
 
 

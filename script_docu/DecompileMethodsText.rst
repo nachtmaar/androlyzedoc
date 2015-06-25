@@ -4250,6 +4250,6 @@ View the raw data:
 	     public final declar
 
 
-.. literalinclude:: androlyze/scripts_builtin/DecompileMethodsText.py
+.. literalinclude:: ../androlyze/scripts_builtin/DecompileMethodsText.py
 
 

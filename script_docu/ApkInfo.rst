@@ -1623,6 +1623,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/ApkInfo.py
+.. literalinclude:: ../androlyze/scripts_builtin/ApkInfo.py
 
 

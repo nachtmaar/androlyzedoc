@@ -48,6 +48,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/DecompileClasses.py
+.. literalinclude:: ../androlyze/scripts_builtin/DecompileClasses.py
 
 

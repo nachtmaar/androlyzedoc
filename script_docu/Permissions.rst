@@ -85,6 +85,6 @@ View the raw data:
     	 Empty
 
 
-.. literalinclude:: androlyze/scripts_builtin/manifest/Permissions.py
+.. literalinclude:: ../androlyze/scripts_builtin/manifest/Permissions.py
 
 
