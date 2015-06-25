@@ -26,7 +26,7 @@ Demo
 
 The logging is pretty self-explenatory. So we don't have to spend much time here. Just have a look at the logging of this very simple script and the produced output:
 
-.. literalinclude:: ../androlyze/model/script/impl/ShowLoggingFuncs.py
+.. literalinclude:: androlyze/androlyze/model/script/impl/ShowLoggingFuncs.py
 
 There are a few things to notice. First there is a static and a dynamic part of the result. The categories "apk meta" and "script meta" are part of every result.
 The dynamic part is the data you log.
@@ -98,6 +98,6 @@ You can also supply your custom log object and specify a custom file name extens
 
 Just have a look at the following example.
 
-.. literalinclude:: ../androlyze/model/script/impl/GVMAnalysisExample.py
+.. literalinclude:: androlyze/androlyze/model/script/impl/GVMAnalysisExample.py
 
 
