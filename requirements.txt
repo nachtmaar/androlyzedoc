@@ -6,3 +6,4 @@ boto
 fabric
 simplejson
 numpydoc
+sphinx
