@@ -23,6 +23,9 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 sys.path.insert(0, os.path.abspath('./'))
 sys.path.insert(1, os.path.abspath('androlyze/'))
 sys.path.append(os.path.abspath("androguard"))
+sys.path.append(os.path.abspath("../"))
+sys.path.append(os.path.abspath("../.."))
+sys.path.append(os.path.abspath("../../.."))
 
 # TOOD: REMOVE
 print sys.path
