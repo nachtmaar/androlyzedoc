@@ -4,5 +4,5 @@
 #pandoc -f markdown -t rst ../README.md -o index.rst
 #pandoc -f rst -t markdown index.rst -o README.md
 make clean
-sphinx-apidoc -f ../ -o .
+sphinx-apidoc -f ../ -o apidoc/
 make html

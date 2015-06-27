@@ -38,7 +38,7 @@ License
     getting_apks
     monitoring
 
-.. autoclass:: androlyze
+.. autoclass:: apidoc
 
 Indices and tables
 ==================
