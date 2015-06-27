@@ -29,6 +29,7 @@ sys.path.append(os.path.abspath("../../.."))
 
 # TOOD: REMOVE
 print sys.path
+os.system("sphinx-apidoc -f androlyze/ -o apidoc/")
 os.system("pwd")
 os.system("ls -1 .")
 
