@@ -22,16 +22,10 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('./'))
 sys.path.insert(1, os.path.abspath('androlyze/'))
-sys.path.append(os.path.abspath("androguard"))
-sys.path.append(os.path.abspath("../"))
-sys.path.append(os.path.abspath("../.."))
-sys.path.append(os.path.abspath("../../.."))
+sys.path.append(os.path.abspath("androlyze/androguard"))
 
-# TOOD: REMOVE
-print sys.path
+# generate api doc
 os.system("sphinx-apidoc -f androlyze/ -o apidoc/")
-os.system("pwd")
-os.system("ls -1 .")
 
 # twitter bootstrap
 #import sphinx_bootstrap_theme
