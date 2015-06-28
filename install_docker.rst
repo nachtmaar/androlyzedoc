@@ -5,7 +5,7 @@ Docker
 
 For ease of use, we enable the deployment with Docker. 
 
-`AndroLyze comes with a few docker images which ship the distributed system, consisting of a message queue ( `RabbitMQ <https://www.rabbitmq.com>`_ ), a NoSQL database ( `mongoDB <https://www.mongodb.com>`_ ) and the actual worker node.
+`AndroLyze` comes with a few docker images which ship the distributed system, consisting of a message queue ( `RabbitMQ <https://www.rabbitmq.com>`_ ), a NoSQL database ( `mongoDB <https://www.mongodb.com>`_ ) and the actual worker node.
 
 
 Before you can start playing with Docker you need to clone the repository:
@@ -35,15 +35,15 @@ Linux:
 .. code-block:: sh
 
 	
-	sudo apt-get install docker.io
+	$ sudo apt-get install docker.io
 	
 Mac:
 
 .. code-block:: sh
 
-	brew install boot2docker
-	boot2docker init
-	boot2docker up
+	$ brew install boot2docker
+	$ boot2docker init
+	$ boot2docker up
 	
 Now set the environment variables as instructed by the output of the up command.
 
