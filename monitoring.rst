@@ -2,7 +2,7 @@ Monitoring / Management
 =======================
 
 `AndroLyze` has a few ways to monitor the current analysis.
-First of all you can use a simple bash script to the check status of each worker which is currently registered at the message queue.
+First of all you can use a simple bash script to the check status of each worker which is currently registered at the message queue:
 
 .. code-block:: sh
 

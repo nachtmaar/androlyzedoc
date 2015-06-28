@@ -8,7 +8,7 @@ Install AndroLyze
 .. code-block:: sh
 	
 	# clone recursive to fetch submodules
-	git clone --recursive https://ds.mathematik.uni-marburg.de/gitlab/android/androlyze.git
+	git clone --recursive https://github.com/nachtmaar/androlyze.git
 	
 	cd androlyze
 
@@ -30,7 +30,7 @@ Install other requirements
 	# install pip
 	sudo apt-get install python-pip
 
-	# install mongodb python driver
+	# install python requirements
 	pip install --user -r docker/worker/requirements.txt
 
 Distributed Environment
@@ -38,19 +38,14 @@ Distributed Environment
 
 .. code-block:: sh
 
-	# install celery
-	sudo pip install celery
-
 	# only for task server
 	sudo apt-get install rabbitmq-server
 
+	# only for result database
 	sudo apt-get install mongodb
 
-	# needed for worker clients (dependency of androguard)
-	sudo pip install ipython
-
 MongoDB
-```````
+^^^^^^^
 
 Also see `MongoDB installation <http://docs.mongodb.org/manual/installation/>`_
 
@@ -148,7 +143,7 @@ RabbitMQ configuration (see `this <http://celery.readthedocs.org/en/latest/getti
 .. code-block:: sh
 
  	sudo rabbitmqctl add_user androlyze <pw>
-	sudo rabbitmqctl add_vhost androlyze
+	sudo rabbitmqctl add_vhost androlyze_vhost
 	sudo rabbitmqctl set_permissions -p androlyze_vhost androlyze  ".*" ".*" ".*"
 	
 
@@ -193,17 +188,11 @@ File: /etc/rabbitmq/rabbitmq.config
 	tail -n 50 /var/log/rabbitmq/rabbit....log
 
 
-Distributed config
-``````````````````
-There is an extra config file for the distributed environment.
-Its located at androlyze/settings/defaults/distributed.conf
-
-.. literalinclude:: ../androlyze/settings/defaults/distributed.conf
-
-
 Deployment and Management
 -------------------------
-Fabric uses ssh to connect to the workers and executes the tasks locally on them.
+
+`AndroLyze` follows a classical cluster design. Therefore our deployment and manegement is automized with the help of Fabric which uses ssh to connect to the workers and executes the tasks locally on them.
+
 Therefore you need to do set a few values in the Deployment section of the distributed config file.
 
 .. code-block:: sh
@@ -254,11 +243,11 @@ Examples
 	fab kill_processes
 
 	# deploy scripts on workers
-	fab deploy_scripts:userscripts/nils/
+	fab deploy_scripts:scripts_user/nils/
 
 .. warning::
 
 	.. code-block:: sh
 
 		# don't use! it will wipe the scripts from other users!
-		fab deploy_scripts:userscripts
+		fab deploy_scripts:scripts_user

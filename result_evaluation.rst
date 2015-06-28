@@ -7,14 +7,34 @@ Have a look at the `Eval` class of the script template.
 
 The class enables a direct way to the API of the MongoDB driver as well as the simplified query API from `AndroLyze`.
 
-The script can be evaluated by running
+But be sure you have ran it before:
 
 .. code-block:: sh
 
-    ./androeval androlyze/model/script/ScriptTemplate.py
+  worker@ee6ff2ae704e:/home/worker/androlyze$ ./androanalyze androlyze/model/script/ScriptTemplate.py --apks apks/
+  INFO: appending "androguard/" to sys.path
+  Welcome to AndroLyze!
 
+  Loaded scripts:
+  ScriptTemplate 0.1
+  WARNING: Analyzed 1 apks
+  done
+  WARNING: Took 0:00:01 (h/m/s)
 
-.. literalinclude:: ../androlyze/model/script/ScriptTemplate.py
+The script can be evaluated by running:
+
+.. code-block:: sh
+
+  worker@ee6ff2ae704e:/home/worker/androlyze$ ./androeval androlyze/model/script/ScriptTemplate.py
+  INFO: appending "androguard/" to sys.path
+  evaluating 'ScriptTemplate' version: 0.1
+  {u'_id': u'5d3e57fdbea31b2f0f1fa0e30b6df866d7b25b60bda3a6ccfd77f0490fa36c12',
+   u'apk meta': OrderedDict([(u'package name', u'de.uni_marburg.ipcinetcallee'), (u'version name', u'1.0'), (u'sha256', u'2289f4ec4d4c753e920f7841a5f329ecc6abec3d2865b85bb9a55467cb056877'), (u'import date', None), (u'build_date', datetime.datetime(2015, 4, 21, 19, 35, 56)), (u'path', None), (u'tag', None)])}
+  WARNING: Took 0:00:00 (h/m/s)
+
+The result shows the query performed in :py:meth:`.ScriptTemplate._evaluate` directly using the mongodb driver and shows an equivalent query using `AndroLyze`.
+
+.. literalinclude:: androlyze/model/script/ScriptTemplate.py
 
 Manual
 ------

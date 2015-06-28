@@ -2,19 +2,19 @@ Logging
 =======
 
 AndroLyzeLab comes with a built-in logging object which is directly connected to MongoDB.
-Internally the logging object is represented as an :py:mod:`collections.OrderedDict`.
+Internally the logging object is represented as an :py:class:`collections.OrderedDict`.
 
 Before you can use it, you have to register the basic structure.
 This is intended for better comparison of the results afterwards.
 
-If you try to log to some key that hasn't been registered an exception will be raised.
+If you try to log to some key that hasn't been registered, an exception will be raised.
 Therefore you should test your script locally before you run it on a cluster!
 
 During the script development you should use the the static function :py:meth:`.AndroScript.test` to test if your script runs correctly.
 
 There are three different keys that you can register and/or log to:
 
-* bool: Registers a boolean key. Will be set to False
+* bool: Registers a boolean key. Will be set to False by default.
 
 * enum: Register an enumeration key. Will create a list internally which can be used to append iterative.
 
@@ -31,7 +31,7 @@ The logging is pretty self-explenatory. So we don't have to spend much time here
 There are a few things to notice. First there is a static and a dynamic part of the result. The categories "apk meta" and "script meta" are part of every result.
 The dynamic part is the data you log.
 Second it shows the result layout before and after logging values to it.
-The layout after registering the basic layout can be seen at ("category", "category2", "unlogged"). The final result after logging some values to it at ("category", "category2", "logged").
+The layout after registering the basic layout can be seen at ("category1", "category2", "unlogged"). The final result after logging some values to it can be seen at ("category1", "category2", "logged").
 
 .. code-block:: sh
 
@@ -69,10 +69,21 @@ The layout after registering the basic layout can be seen at ("category", "categ
 		}
 	}
 
+.. note::
 
-The fact that you need to register a structure doesn't mean you can't log to dynamic keys.
-It just means you have to register the key before you try to log to it!
+	The fact that you need to register a structure doesn't mean you can't log to dynamic keys.
+	It just means you have to register the key before you try to log to it!
 
+
+Using different output formats
+------------------------------
+
+You don't have to use the built-in :py:class:`.ResultObject` for logging.
+You can also supply your custom log object and specify a custom file name extension.
+
+Just have a look at the following example which creates a control flow graph and store's it as .gexf file:
+
+.. literalinclude:: androlyze/androlyze/model/script/impl/GVMAnalysisExample.py
 
 Common mistakes
 ---------------
@@ -88,16 +99,5 @@ instead of
 	.. code-block:: sh
 	 
 		res.log("key", "value", *("foo", "bar"))
-
-
-Using different output formats
-------------------------------
-
-You don't have to use the built-it :py:class:`.ResultObject` for logging.
-You can also supply your custom log object and specify a custom file name extension.
-
-Just have a look at the following example.
-
-.. literalinclude:: androlyze/androlyze/model/script/impl/GVMAnalysisExample.py
 
 

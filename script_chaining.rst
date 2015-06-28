@@ -5,6 +5,11 @@ Use the :py:class:`.ChainedScript` to chain multiple :py:class:`.AndroScript`
 
 Either derive from it, or use the :py:func:`.chained_script` function to generate a :py:class:`.ChainedScript`
 
+Have a  look at this example of a :py:class:`.ChainedScript` which chains scripts like :py:class:`.Activities`, :py:class:`.Services`, :py:class:`.Permissions` etc:
+
+.. literalinclude:: androlyze/androlyze/model/script/impl/ChainedApkInfos.py
+
+
 There are 5 interesting methods you should see:
 
 * :py:meth:`.ChainedScript.root_categories`
@@ -64,4 +69,5 @@ There are 5 interesting methods you should see:
 	        ]
 	    }
 
-.. literalinclude:: androlyze/androlyze/model/script/impl/ChainedApkInfos.py
+
+.. literalinclude:: androlyze/androlyze/model/script/ChainedScript.py	    

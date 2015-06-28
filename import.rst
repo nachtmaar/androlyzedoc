@@ -16,7 +16,6 @@ At first, we create an import database so that we can easily manage our APKs. Im
     # Do both
     ./androimport -cd -cdb apks/
 
-
     # Use a custom import database
     ./androimport -idb dbs/foo.db -cdb apks/
 

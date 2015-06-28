@@ -60,7 +60,7 @@ MongoDB stores binary files in two collections. One contains the meta informatio
 To view the actual content, one has to append the "-r" or "--raw" switch.
 The following command stores the disassembly of the ebay application in a text file called "com.ebay.mobile.java".
 
-.. code-block::sh
+.. code-block:: sh
 
 
      ./androquery result -sn DecompileClassesText -nd -r -pn com.ebay.mobile > com.ebay.mobile.java
@@ -71,8 +71,11 @@ Code Permissions
 
 The `CodePermissions` scripts checks where the app uses which permissions and lists the locations in the code as well as the decompiled code using them.
 This time we don't perform the analysis local. Instead we use the distributed system of `AndroLyze` signaled with the "-pm distributed
-switch. The default parallelization mode can be customized in the config file. The APKs are seriliazed and stored in the message queue (RabbitMQ).
+switch. The default parallelization mode can be customized in the config file. 
+
 If the APKs have been imported to MongoDB or Amazon S3 one should use the "-si" switch so that only the hashes of the APKs are send.
+
+The following command insteads serializes the APKs and includes them in the message, stored in the distributed task queue:
 
 .. code-block:: sh
 
@@ -96,6 +99,7 @@ If the APKs have been imported to MongoDB or Amazon S3 one should use the "-si" 
     done
     WARNING: Took 0:49:10 (h/m/s)
 
+The result can be queried like this:
 
 .. code-block:: sh
 

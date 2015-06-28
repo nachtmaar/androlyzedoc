@@ -2,12 +2,18 @@
 Getting APKs
 ************
 
+`AndroLyze` has an easy way to download APKs from the `PlayStore` through `GooglePlayCrawler <https://github.com/Akdeniz/google-play-crawler>`_.
+
+
+
 Requirements
 ------------
 
+The docker image has not initialized this git submodule by default. So we need to do this first:
+
 .. code-block:: sh
 
-    $ worker@f6a8d4e49d39:/home/worker/androlyze$ git submodule update --init androguard
+    $ worker@f6a8d4e49d39:/home/worker/androlyze$ git submodule update --init google-play-crawler
     $ worker@f6a8d4e49d39:/home/worker/androlyze$ ln -s google-play-crawler/googleplay/googleplaycrawler-0.3.jar googleplaycrawler.jar
     $ worker@f6a8d4e49d39:/home/worker/androlyze$ cp google-play-crawler/googleplay/crawler.conf conf/crawler.conf
 
