@@ -38,7 +38,7 @@ License
 Documentation
 -------------
 
-The `documentation <https://github.com/nachtmaar/androlyzedoc>`_ is publicly avaiable and opensource too. Feel free to contribute!
+The documentation is hosted at `readthedocs.org <https://androlyze.readthedocs.org>`_ and opensource available at `github <https://github.com/nachtmaar/androlyzedoc>`_. Feel free to contribute!
 Edit the docs on github, commit it and it will be automatically built by readthedocs!
 
 .. toctree::
