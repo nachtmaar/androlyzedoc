@@ -1,0 +1,9 @@
+# sphinx build
+apidoc/*
+_build/*
+
+# python
+*.pyc
+
+# vim
+*.swp
