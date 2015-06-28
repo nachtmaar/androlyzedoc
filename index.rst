@@ -35,6 +35,11 @@ License
 -------
 `AndroLyze` is licensed under the `MIT <https://tldrlegal.com/license/mit-license>`_ license.
 
+Documentation
+-------------
+
+The `documentation <https://github.com/nachtmaar/androlyzedoc>`_ is publicly avaiable and opensource too. Feel free to contribute!
+Edit the docs on github, commit it and it will be automatically built by readthedocs!
 
 .. toctree::
     :maxdepth: 2
