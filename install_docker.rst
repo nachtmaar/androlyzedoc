@@ -12,7 +12,8 @@ Before you can start playing with Docker you need to clone the repository:
 
 .. code-block:: sh
 
-	$ git clone https://github.com/nachtmaar/androlyze.git
+	$ git clone --recursive https://github.com/nachtmaar/androlyze.git
+	$ cd androlyze
 
 Config
 ======
@@ -29,15 +30,22 @@ Docker installation
 
 The installation with Docker requires Linux. On Mac have a look at `boot2docker <http://boot2docker.io>`_ which uses a linux virtual machine to enable the usage of Docker.
 
+Linux:
+
 .. code-block:: sh
 
-	# Linux
+	
 	sudo apt-get install docker.io
-	# Mac
+	
+Mac:
+
+.. code-block:: sh
+
 	brew install boot2docker
 	boot2docker init
 	boot2docker up
-	# Set the environment variables as instructed by the output of the up command
+	
+Now set the environment variables as instructed by the output of the up command.
 
 .. note::
 
@@ -56,9 +64,12 @@ Create and adopt your `AndroLyze` config file to your needs:
 
 .. code-block:: sh
 
-	cp androlyze/settings/defaults/config.conf data_container/
+	$ cp androlyze/settings/defaults/config.conf data_container/
+	$ vim data_container/config.conf
 
-Start the data container:
+The default config is suitable for a local run using Docker. Nothing has to be changed, but can of course.
+
+Start the data container (and supply a custom directory for the APKs and import databases which shall be mounted into the container and lives inside the host os):
 
 .. code-block:: sh
 
@@ -68,7 +79,7 @@ Start the data container:
 Create X.509 certificates
 =========================
 
-`AndroLyze` can be secured with X.509 certificates. The following container creates the necessary CA, server and client certificates and stores them in `conf/distributed/ssl of the `AndroLyze` source folder.
+`AndroLyze` can be secured with X.509 certificates. The following container creates the necessary CA, server and client certificates and stores them in `conf/distributed/ssl` of the `AndroLyze` source folder.
 
 .. note::
 	
@@ -104,14 +115,14 @@ Run the NoSQL database (mongoDB):
 
 .. code-block:: sh
 	
-	# The command exposes port 27017 so that mongoDB can be accesses from the containers host system
+	# The command exposes port 27017 so that mongoDB can be accessed from the containers host system
 	$ docker run -it --rm --name mongodb -p 27017:27017 --volumes-from data nachtmaar/androlyze_mongodb:latest
 
 Run the message queue (RabbitMQ):
 
 .. code-block:: sh
 
-	# The command exposes port 15672 so that the rabbitmq management webui can be accesses from the containers host system
+	# The command exposes port 15672 so that the rabbitmq management webui can be accessed from the containers host system
 	$ docker run -it --rm --name rabbitmq -p 15672:15672 --volumes-from data nachtmaar/androlyze_rabbitmq:latest
 
 Run celery flower, a monitoring tool for the distributed system.
@@ -135,7 +146,7 @@ Run the worker and link the database as well as the message queue so that they k
 That's it
 =========
 
-All containers need some time to initialize themselves. Especially the worker and flower container need to pull code from git (secured with ssh key verification).
+All containers need some time to initialize themselves. Especially the worker and flower container need to pull code from git (secured with https or ssh key verification for private repos).
 
 In the status_ section you can check how the logs of the containers should look like if you encounter any error.
 
@@ -250,9 +261,16 @@ Worker
 Starting/stopping
 =================
 
+All containers can be simply stopped and start after they have been created the first time. But for this you need to create all the containers without the "--rm" switch!
+
+
+Stop them:
+
 .. code-block:: sh
 
 	docker stop flower worker rabbitmq mongodb data
+
+Start them:
 
 .. code-block:: sh
 
