@@ -4,10 +4,9 @@ import glob, os
 import subprocess
 import fnmatch
 
-os.chdir("..")
-print os.getcwd()
+os.chdir("androlyze")
 
-DOCU_DIR="androlyzelabdoc/script_docu"
+DOCU_DIR="../script_docu"
 SCRIPTS_DIR="scripts_builtin"
 APK="com.spotify.music"
 
