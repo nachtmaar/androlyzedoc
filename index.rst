@@ -6,11 +6,19 @@ AndroLyze
 
 About
 -----
-AndroLyze is a distributed framework for android app analysis with unified logging and reporting functionality to perform security checks on large numbers of applications in an efficient manner. AndroLyze provides optimized scheduling algorithms for distributing static code analysis tasks across several machines. Moreover, AndroLyze can handle several versions of a single mobile application to generate a security track record over many versions.
+AndroLyze is a distributed framework for android app analysis with unified logging and reporting functionality to perform security checks on large numbers of applications in an efficient manner.
+
+It provides optimized scheduling algorithms for distributing static code analysis tasks across several machines. Moreover, it can handle several versions of a single mobile application to generate a security track record over many versions.
+
+The code and documentation is related to the following paper (link will follow):
+
+.. image:: https://raw.githubusercontent.com/nachtmaar/androlyzedoc/master/gfx/androlyze_paper.png
+	:width: 90%
+	:align: center
 
 Features
 --------
-- Static code analysis based on `Androguard <https://github.com/androguard/androguard>`_
+- Static android code analysis based on `Androguard <https://github.com/androguard/androguard>`_
 - Unified logging and reporting framework backed by `mongoDB <https://www.mongodb.com>`_
 - Efficient Android app analysis on a single machine | local cluster | cloud
 - APK distribution via mongoDB, Amazon S3 or serialization of the local .apk files
@@ -25,7 +33,8 @@ We provide an easy way to install *AndroLyze* using `Docker <https://www.docker.
 
 License
 -------
-`AndroLyze` is licensed under the MIT license.
+`AndroLyze` is licensed under the `MIT <https://tldrlegal.com/license/mit-license>`_ license.
+
 
 .. toctree::
     :maxdepth: 2

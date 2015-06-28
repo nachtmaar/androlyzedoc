@@ -257,7 +257,7 @@ Starting/stopping
 .. code-block:: sh
 
 	# be sure to start the services before flower and the worker (they need the correct ip and port of the services)
-	docker start data mongodb rabbitmq flower worker flower
+	docker start data mongodb rabbitmq flower worker
 
 
 Development
